@@ -1,0 +1,47 @@
+{
+  "name": "@pmwdigital/webhook",
+  "version": "0.1.0",
+  "description": "Webhook imzala ve doğrula: HMAC-SHA256, t=...,v1=... başlığı, sabit zamanlı karşılaştırma ve tekrar penceresi",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prepare": "npm run build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pmwdigital/pmw-webhook.git"
+  },
+  "keywords": [
+    "webhook",
+    "hmac",
+    "sha256",
+    "signature",
+    "signature-verification",
+    "webcrypto",
+    "stripe",
+    "replay-protection"
+  ]
+}
